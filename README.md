@@ -35,8 +35,8 @@
   models package
   - class Challenge and subclasses...
   - 
-in our case: 1 challenger is in relation with several challenges
-we want to receive these challenges for each challenger
+- In our case: 1 challenger is in relation with several challenges
+- We want to receive these challenges for each challenger
 
 No create a service to request challenge microservice
 
@@ -53,7 +53,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import challenger.models.Challenge;
 
-@FeignClient(name = "challenge") // name of service that expose endpoints : challenge-microservice
+@FeignClient(name = "challenge") // name of service that expose endpoints : spring.application.name=challenge
 public interface ChallengeRestService {
 
 	@GetMapping("/challenges/{id}") // ?projection=fullChallenge")
