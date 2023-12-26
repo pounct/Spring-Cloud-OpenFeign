@@ -41,3 +41,21 @@ dependencyManagement {
 }
 
 </code></pre>
+
+1. Getting Started
+
+<pre><code class="hljs java"><button aria-live="Copy" class="button is-spring is-copy">Copy</button><span class="hljs-meta">@SpringBootApplication</span>
+<span class="hljs-meta">@EnableFeignClients</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebApplication</span> </span>{
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+		SpringApplication.run(WebApplication<span class="hljs-class">.<span class="hljs-keyword">class</span>, <span class="hljs-title">args</span>)</span>;
+	}
+
+	<span class="hljs-meta">@FeignClient</span>(<span class="hljs-string">"name"</span>)
+	<span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">NameService</span> </span>{
+		<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">"/"</span>)
+		<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span></span>;
+	}
+}
+</code></pre>
