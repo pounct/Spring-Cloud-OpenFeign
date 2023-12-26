@@ -66,3 +66,38 @@ dependencyManagement {
 - pom.xml/gradle.build
 
   <img src="images/challenger1init.png"/>
+
+- prepare the necessary models to receive the data in
+  models package
+  - class Challenge and subclasses...
+  - 
+in our case: 1 challenger is in relation with several challenges
+we want to receive these challenges for each challenger
+
+No create a service to request challenge-service
+
+
+<code>
+package challenger.services;
+
+import java.util.UUID;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.hateoas.PagedModel;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import challenger.models.Challenge;
+
+@FeignClient(name = "challenge")
+public interface ChallengeRestService {
+
+	@GetMapping("/challenges/{id}") // ?projection=fullChallenge")
+	public Challenge challengeById(@PathVariable UUID id);
+
+	@GetMapping("/challenges/Challenger/{id}")
+	public PagedModel<Challenge> allChallengesByUserId(@PathVariable UUID id);
+
+}
+</code>
+
