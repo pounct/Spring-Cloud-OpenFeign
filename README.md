@@ -19,3 +19,25 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span>
 </code></pre>
+
+<pre><code class="language-groovy hljs"><button aria-live="Copy" class="button is-spring is-copy">Copy</button>plugins {
+  id <span class="hljs-string">'java'</span>
+  id <span class="hljs-string">'org.springframework.boot'</span> version <span class="hljs-string">'3.2.0'</span>
+  id <span class="hljs-string">'io.spring.dependency-management'</span> version <span class="hljs-string">'1.1.4'</span>
+}
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  set(<span class="hljs-string">'springCloudVersion'</span>, <span class="hljs-string">"2023.0.0"</span>)
+}
+
+dependencyManagement {
+  imports {
+    mavenBom <span class="hljs-string">"org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"</span>
+  }
+}
+
+</code></pre>
