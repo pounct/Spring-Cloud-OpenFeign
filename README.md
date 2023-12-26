@@ -89,7 +89,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import challenger.models.Challenge;
 
-@FeignClient(name = "challenge")
+@FeignClient(name = "challenge") // name of service that expose endpoints : challenge-microservice
 public interface ChallengeRestService {
 
 	@GetMapping("/challenges/{id}") // ?projection=fullChallenge")
