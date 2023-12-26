@@ -4,7 +4,7 @@
 
 1. Include Feign
 
-<pre><code class="language-xml hljs"><button aria-live="Copy" class="button is-spring is-copy">Copy</button><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+<pre><code class="language-xml hljs"><button aria-live="Copy" class="button is-spring is-copy"></button><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">spring-cloud.version</span>&gt;</span>2023.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">spring-cloud.version</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span>
@@ -20,7 +20,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span>
 </code></pre>
 
-<pre><code class="language-groovy hljs"><button aria-live="Copy" class="button is-spring is-copy">Copy</button>plugins {
+<pre><code class="language-groovy hljs"><button aria-live="Copy" class="button is-spring is-copy"></button>plugins {
   id <span class="hljs-string">'java'</span>
   id <span class="hljs-string">'org.springframework.boot'</span> version <span class="hljs-string">'3.2.0'</span>
   id <span class="hljs-string">'io.spring.dependency-management'</span> version <span class="hljs-string">'1.1.4'</span>
@@ -44,7 +44,7 @@ dependencyManagement {
 
 1. Getting Started
 
-<pre><code class="hljs java"><button aria-live="Copy" class="button is-spring is-copy">Copy</button><span class="hljs-meta">@SpringBootApplication</span>
+<pre><code class="hljs java"><button aria-live="Copy" class="button is-spring is-copy"></button><span class="hljs-meta">@SpringBootApplication</span>
 <span class="hljs-meta">@EnableFeignClients</span>
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebApplication</span> </span>{
 
