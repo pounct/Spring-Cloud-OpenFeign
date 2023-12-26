@@ -74,10 +74,10 @@ dependencyManagement {
 in our case: 1 challenger is in relation with several challenges
 we want to receive these challenges for each challenger
 
-No create a service to request challenge-service
+No create a service to request challenge microservice
 
 
-<code>
+<pre><code>
 package challenger.services;
 
 import java.util.UUID;
@@ -99,5 +99,5 @@ public interface ChallengeRestService {
 	public PagedModel<Challenge> allChallengesByUserId(@PathVariable UUID id);
 
 }
-</code>
+</code></pre>
 
