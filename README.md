@@ -65,4 +65,4 @@ dependencyManagement {
 - we will create a challenger microservice with its dependencies
 - pom.xml/gradle.build
 
-  <img src=""/>
+  <img src="images/challenger1init.png"/>
